@@ -11,6 +11,235 @@
     
 </head>
 <body>
+
+    <div class="navbar p-4 flex justify-between items-center">
+        <div class="navbar-left">
+          <span class="navbar-title text-3xl font-bold text-black">P-Ticket</span>
+        </div>
+        <div class="navbar-center">
+          <ul class="menu-options flex space-x-14">
+            <li><a href="#" class="text-black text-xl">Home</a></li>
+            <li><a href="#" class="text-black text-xl">About</a></li>
+            <li><a href="#" class="text-black text-xl">Destination</a></li>
+            <li><a href="#" class="text-black text-xl">Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <button  class="btn text-green-700 bg-green-200">Bus <img src="images/bus-icon.png" alt="Bus Icon" class="ml-2 w-6 h-6  rounded-full"></button>
+        </div>
+      </div>
+
+
+      <div class="relative bg-cover bg-center h-96" style="background-image: url('images/banner.png');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center">
+          <h2 class="text-4xl font-bold mb-4 text-white">End-To-End Travel with</h2>
+          <h2 class="text-4xl font-bold mb-4 text-green-500">P-Paribahan</h2>
+
+          <p class="text-lg mb-6 text-white">Book your bus tickets hassle-free with our user-friendly ticketing platform.</p>
+          <script src="scripts/bus_button.js"></script>
+          <button class="px-6 py-3 bg-green-500 text-black font-semibold rounded-md shadow-md hover:bg-green-200" onclick="scrollToPari()">Buy Tickets</button>
+        </div>
+      </div>
+
+      <div class="section p-16">
+        <div class="card-container grid gap-4 grid-cols-2">
+          <div class="card bg-yellow-300 shadow-md p-4 rounded-md">
+            <h3 class="text-4xl font-bold mb-2">15% OFF</h3>
+            <div class="flex">
+              <div class="w-1/2 pr-4">
+                <p class="text-lg font-semibold">on your next purchase</p>
+                <p class="text-gray-600">use by January 2024</p>
+              </div>
+              <div class="w-1/2 pl-4 border-l border-gray-900">
+                <h4 class="text-4xl font-bold mb-2">NEW15</h4>
+                <p class="text-gray-600">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-pink-200 shadow-md p-4 rounded-md">
+            <h3 class="text-4xl font-bold mb-2">20% OFF</h3>
+            <div class="flex">
+              <div class="w-1/2 pr-4">
+                <p class="text-lg font-semibold">on your next purchase</p>
+                <p class="text-gray-600">use by January 2024</p>
+              </div>
+              <div class="w-1/2 pl-4 border-l border-gray-900">
+                <h4 class="text-4xl font-bold mb-2">Couple 20</h4>
+                <p class="text-gray-600">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8">
+            <button class="btn btn-green border-green-500 text-green-500">See All Offers</button>
+          </div>
+      </div>
+
+
+
+
+      <div id="pari"class="flex p-24 ">
+        <div class="w-1/2">
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex">
+                <img src="images/bus-logo.png" class="w-8 h-8 mr-2" alt="Image Icon">
+                <h2 class="text-lg font-bold">Greenline Paribahan</h2>
+
+            </div>
+            
+            <button id="dynamicButton" class="flex items-center justify-center bg-green-100" onclick="seat()">
+                <img src="images/seat-green.png" class="w-8 h-8 mr-2" alt="Button Image">
+                <span class="inline-block">40 seats Left</span>
+            </button>
+          </div>
+          <p class="mb-4">Coach-009-WEB!</p>
+          
+          <div class="card bg-gray-200 p-4 mt-4">
+            <div class="mb-2 flex justify-between">
+              <p class="mb-2">Route</p>
+              <p class="mb-2">Dhaka-Sylhet</p>
+            </div>
+            <div class="mb-2 flex justify-between">
+              <p class="mb-2">Departure Time</p>
+              <p class="mb-2">9:00 PM</p>
+            </div>
+            <div class="flex justify-between">
+              <span class="badge bg-gray-300 mr-2">Boarding Point-Dhaka</span>
+              <span class="badge bg-gray-300 mr-2">Dropping Point- Chittagong</span>
+              <span class="badge bg-gray-300">Est Time- 11Hr</span>
+            </div>
+          </div>
+        </div>
+
+         <!-- Divider -->
+        <div class="border-l border-black mx-4 p-5"></div>
+        <div class="w-1/2 items-center ml-40">
+          <img src="images/fare.png" class="w-24 h-32 mb-4" alt="Image Right">
+          <p class="mb-4 font-bold text-xl">550 Taka</p>
+          <p>Per Seat</p>
+        </div>
+      </div>
+      
+      </div>
+
+
+
+      <div class="flex">
+        <!-- Left Part -->
+        <div class="w-1/2 pr-4">
+          <h2 class="text-xl font-bold mb-2">Section Title</h2>
+          <div class="flex justify-between mb-4">
+            <div>
+              <img src="images/seat-gray.png" class="w-10 h-16 mr-2" alt="Image 1">
+              <p class="mb-2">Available</p>
+            </div>
+            <div>
+              <img src="images/seat-green-filled.png" class="w-10 h-16 mr-2" alt="Image 2">
+              <p class="mb-2">Selected</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-5 gap-8 mb-4">
+            
+            <!-- Row 1 -->
+
+            <div class="row-span-1 col-span-5 md:col-span-1">
+                
+                <div class="space-y-8 gap-8">
+                    <p class="mb-2 font-semibold">A</p>
+                    <p class="mb-2 font-semibold">B</p>
+                    <p class="mb-2 font-semibold">C</p>
+                    <p class="mb-2 font-semibold">D</p>
+                    <p class="mb-2 font-semibold">E</p>
+
+                    
+  
+                </div>
+                
+            </div>
+
+            <div class="row-span-1 col-span-5 md:col-span-1">
+             
+              <div class="space-y-8 gap-8">
+                <button class="button bg-gray-300">Button 1</button>
+                <button class="button bg-gray-300">Button 2</button>
+                <button class="button bg-gray-300">Button 3</button>
+                <button class="button bg-gray-300">Button 4</button>
+                <button class="button bg-gray-300">Button 5</button>
+
+              </div>
+              
+            </div>
+            <!-- Row 2 -->
+            <div class="row-span-1 col-span-5 md:col-span-1">
+                
+                <div class="space-y-8 gap-8">
+                  <button class="button bg-gray-300">Button 11</button>
+                  <button class="button bg-gray-300">Button 12</button>
+                  <button class="button bg-gray-300">Button 13</button>
+                  <button class="button bg-gray-300">Button 14</button>
+                  <button class="button bg-gray-300">Button 15</button>
+  
+                </div>
+                
+              </div>
+            <!-- Row 3 -->
+            <div class="row-span-1 col-span-5 md:col-span-1">
+                
+                <div class="space-y-8 gap-8">
+                  <button class="button bg-gray-300">Button 111</button>
+                  <button class="button bg-gray-300">Button 222</button>
+                  <button class="button bg-gray-300">Button 333</button>
+                  <button class="button bg-gray-300">Button 444</button>
+                  <button class="button bg-gray-300">Button 555</button>
+  
+                </div>
+                
+              </div>
+            <!-- Row 4 -->
+            <div class="row-span-1 col-span-5 md:col-span-1">
+              
+                <div class="space-y-8 gap-8">
+                  <button class="button bg-gray-300">Button 1111</button>
+                  <button class="button bg-gray-300">Button 2222</button>
+                  <button class="button bg-gray-300">Button 3333</button>
+                  <button class="button bg-gray-300">Button 4444</button>
+                  <button class="button bg-gray-300">Button 5555</button>
+  
+                </div>
+                
+              </div>
+          </div>
+          
+          
+            
+        </div>
+        <!-- Divider -->
+        <div class="border-l border-gray-300 mx-4"></div>
+        <!-- Right Part -->
+        <div class="w-1/2 pl-4">
+          <!-- Right part content goes here -->
+        </div>
+    </div>
+
+    <script>
+        // Add event listener to all buttons with class 'button'
+        document.querySelectorAll('.button').forEach(button => {
+          button.addEventListener('click', () => {
+            // Toggle button background color between gray and green
+            button.classList.toggle('bg-gray-300');
+            button.classList.toggle('bg-green-500');
+          });
+        });
+    </script>
+      
+      
+      
+      
+    
+
+   
     
 </body>
 </html>

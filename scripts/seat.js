@@ -4,6 +4,7 @@ document.querySelectorAll('.button').forEach(button => {
       // Toggle button background color between gray and green
       button.classList.toggle('bg-gray-300');
       button.classList.toggle('bg-green-500');
+      updateSeatCountAndTotalPrice();
     });
   });
   
